@@ -1,10 +1,209 @@
+/* 
+Landing page 
+*
+*/
+
+/* General */
+
+html{scroll-behavior:smooth}
+
 body {
 	background-color: #E6E7E8;
 }
 
-h1 {
+/* Menu */
+
+.header .logo-container img {
+	max-width: 100%;
+}
+
+.menu {
+	background: red;
+}
+
+.menu-items {
+	list-style: none;
+}
+
+.menu li {
 	display: inline-block;
-	padding: 0px 20px;
-	color: #2d2d2d;
-	background-color: #FFE600;
+	color: white;
+}
+
+
+/* Presentation */
+
+#presentation {
+	min-height: 700px;
+	background-color: yellow;
+}
+
+
+/* About me */
+
+#aboutme {
+	min-height: 700px;
+	background-color: orange;
+}
+
+
+/* Projects */
+
+#projects {
+	min-height: 700px;
+	background-color: red;
+}
+
+.project-row {
+	display: flex;
+	width: 100vw;
+
+}
+
+.project {
+	width: 33.33vw;
+	background-size: cover;
+	background-position: center center;
+}
+
+#projectOne,
+#projectTwo,
+#projectThree,
+#projectFour,
+#projectFive,
+#projectSix {
+	display: inline-block;
+	position: relative;
+	width: 50%;
+}
+#projectOne:after,
+#projectTwo:after,
+#projectThree:after,
+#projectFour:after,
+#projectFive:after,
+#projectSix:after {
+	content: '';
+	display: block;
+	margin-top: 75%;
+}
+#projectOneContent,
+#projectTwoContent,
+#projectThreeContent,
+#projectFourContent,
+#projectFiveContent,
+#projectSixContent {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* TRANSITION */
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
+	-o-transition: background 1s;
+	transition: background 1s;
+}
+
+#projectOneContent,
+#projectTwoContent,
+#projectThreeContent,
+#projectFourContent,
+#projectFiveContent,
+#projectSixContent {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* TRANSITION */
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
+	-o-transition: background 1s;
+	transition: background 1s;
+}
+
+#projectOneContent {
+	background-image: url("https://placekitten.com/g/1000/1000");
+}
+
+#projectOneContent:hover {
+	background-image: url("https://placekitten.com/1000/1000");
+}
+
+#projectTwoContent {
+	background-image: url("https://placekitten.com/g/1000/1000");
+}
+
+#projectTwoContent:hover {
+	background-image: url("https://placekitten.com/1000/1000");
+}
+
+#projectThreeContent {
+	background-image: url("https://placekitten.com/g/1000/1000");
+}
+
+#projectThreeContent:hover {
+	background-image: url("https://placekitten.com/1000/1000");
+}
+
+#projectFourContent {
+	background-image: url("https://placekitten.com/g/1000/1000");
+}
+
+#projectFourContent:hover {
+	background-image: url("https://placekitten.com/1000/1000");
+}
+
+#projectFiveContent {
+	background-image: url("https://placekitten.com/g/1000/1000");
+}
+
+#projectFiveContent:hover {
+	background-image: url("https://placekitten.com/1000/1000");
+}
+
+#projectSixContent {
+	background-image: url("https://placekitten.com/g/1000/1000");
+}
+
+#projectSixContent:hover {
+	background-image: url("https://placekitten.com/1000/1000");
+}
+
+
+
+
+.project-name {
+
+}
+
+
+/* Contact */
+
+#contact {
+	height: 700px;
+	background-color: magenta;
+}
+
+
+/* BTT */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
