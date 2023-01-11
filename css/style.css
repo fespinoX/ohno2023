@@ -3,6 +3,77 @@ Landing page
 *
 */
 
+/* Reset CSS */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	img{
+		max-width: 100%;
+	}
+	
+	html p, 
+	html span,
+	html li,
+	html h1,
+	html h2,
+	html h3 {
+		font-family: 'Montserrat Regular';
+		color: #2d2d2d;
+	}
+	
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover, 
+	input:-webkit-autofill:focus,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover,
+	textarea:-webkit-autofill:focus,
+	select:-webkit-autofill,
+	select:-webkit-autofill:hover,
+	select:-webkit-autofill:focus {
+		-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+		transition: background-color 5000s ease-in-out 0s;
+	}
+
 /* General */
 
 html{scroll-behavior:smooth}
@@ -13,12 +84,9 @@ body {
 
 /* Menu */
 
-.header .logo-container img {
+#header .logo-container a {
 	max-width: 100%;
-}
-
-.menu {
-	background: red;
+	display: block;
 }
 
 .menu-items {
@@ -27,14 +95,21 @@ body {
 
 .menu li {
 	display: inline-block;
-	color: white;
+	margin-right: 15px;
+}
+
+.menu li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	color: #2d2d2d;
 }
 
 
 /* Presentation */
 
 #presentation {
-	min-height: 700px;
+	padding: 200px 0;
 	background-color: yellow;
 }
 
@@ -42,8 +117,12 @@ body {
 /* About me */
 
 #aboutme {
-	min-height: 700px;
+	padding: 100px 0;
 	background-color: orange;
+}
+
+.fespi-picture {
+	max-width: 100%;
 }
 
 
@@ -57,11 +136,11 @@ body {
 .project-row {
 	display: flex;
 	width: 100vw;
-
 }
 
-.project {
+.project-content {
 	width: 33.33vw;
+	background-color: transparent;
 	background-size: cover;
 	background-position: center center;
 }
@@ -188,7 +267,8 @@ body {
 
 /* BTT */
 
-#myBtn {
+#myBtn,
+#myOtherBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
@@ -204,6 +284,61 @@ body {
   font-size: 18px; /* Increase font size */
 }
 
-#myBtn:hover {
+#myBtn:hover,
+#myOtherBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+
+
+
+
+/* 
+Project
+*
+*/
+
+
+/* General */
+
+.project-cover {
+	height: 600px;
+	background-size: cover;
+	background-position: top center;
+}
+
+.project-image {
+	height: 800px;
+	background-size: cover;
+	background-position: top center;
+}
+
+.goal-image {
+	height: 100%;
+	background-size: cover;
+	background-position: top center;
+	background-image: url("../img/target1.png");
+}
+
+.users-image {
+	height: 100%;
+	background-size: cover;
+	background-position: top center;
+	background-image: url("../img/users2.png");
+}
+
+.process-image img {
+	max-width: 100%;
+}
+
+/* Project one images */
+
+#projectOneCover {
+	background-image: url("https://placekitten.com/3000/1200");
+}
+
+
+#projectOneImage {
+	background-image: url("https://placekitten.com/3000/800");
+}
+
+
