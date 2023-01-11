@@ -84,6 +84,10 @@ body {
 	background-color: #FFE600;
 }
 
+.height-100 {
+	height: 100%;
+}
+
 .ghost-text {
 	display: inline-block;
 	margin: 5px 0;
@@ -93,6 +97,11 @@ body {
 	font-weight: 300;
 	color: #FFF;
 	background: #2d2d2d;
+}
+
+.sick {
+	color: #FFE600;
+	font-weight: 500;
 }
 
 .easy-eyes {
@@ -178,7 +187,7 @@ Landing page
 /* Menu */
 
 .header {
-	margin-top: 20px;
+	margin: 20px 0;
 }
 
 .header .logo-container a {
@@ -195,11 +204,19 @@ Landing page
 	margin-right: 15px;
 }
 
+.menu li:hover {
+	cursor: pointer;
+}
+
 .menu li a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.2rem;
 	color: #2d2d2d;
+}
+
+.menu li a:hover {
+	color: #FF7E7E;
 }
 
 
@@ -237,9 +254,12 @@ Landing page
 
 .project-content {
 	width: 33.33vw;
+	display: flex;
+	align-items: center;
 	background-color: transparent;
 	background-size: cover;
 	background-position: center center;
+	text-decoration: none;
 }
 
 #projectOne,
@@ -299,19 +319,19 @@ Landing page
 }
 
 #projectOneContent {
-	background-image: url("https://placekitten.com/g/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-one.png");
 }
 
 #projectOneContent:hover {
-	background-image: url("https://placekitten.com/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-one-hover.png");
 }
 
 #projectTwoContent {
-	background-image: url("https://placekitten.com/g/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-two.png");
 }
 
 #projectTwoContent:hover {
-	background-image: url("https://placekitten.com/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-two-hover.png");
 }
 
 #projectThreeContent {
@@ -344,13 +364,6 @@ Landing page
 
 #projectSixContent:hover {
 	background-image: url("https://placekitten.com/1000/1000");
-}
-
-
-
-
-.project-name {
-
 }
 
 
@@ -397,45 +410,112 @@ Project
 
 /* General */
 
+.header-project .menu li a:hover {
+	color: #FFE600;
+}
+
+.projects {
+	background-color: #2d2d2d;
+}
+
 .project-cover {
 	height: 600px;
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
+}
+
+.project-name {
+	display: inline-block;
+	padding: 0 30px;
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: #FFE600;
+	color: #2d2d2d;
+}
+
+.project-description {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+.project-info {
+	padding: 100px;
+	background-image: url("../img/vhs.jpg");
+}
+
+.project-info-title {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	background-color: #FF7E7E;
+	color: #2d2d2d;
 }
 
 .project-image {
-	height: 800px;
-	background-size: cover;
-	background-position: top center;
+	height: 700px;
+	background-position: left center;
+}
+
+.project-goal-title {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding-right: 20px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	background-color: #FFE600;
+	color: #2d2d2d;
+}
+
+.project-goal,
+.project-users {
+	padding: 50px 0;
 }
 
 .goal-image {
 	height: 100%;
-	background-size: cover;
-	background-position: top center;
-	background-image: url("../img/target1.png");
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("../img/target.png");
 }
 
 .users-image {
 	height: 100%;
-	background-size: cover;
-	background-position: top center;
-	background-image: url("../img/users2.png");
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("../img/users.png");
 }
 
 .process-image img {
 	max-width: 100%;
 }
 
+/* Menu */
+
+.header-project .menu li a {
+	color: #fff;
+}
+
 /* Project one images */
 
 #projectOneCover {
-	background-image: url("https://placekitten.com/3000/1200");
+	background-image: url("../img/projects/projectone/vision_mockup.png");
 }
-
 
 #projectOneImage {
-	background-image: url("https://placekitten.com/3000/800");
+	background-image: url("../img/projects/projectone/vision_image.png");
 }
 
+/* Project two images */
 
+#projectTwoCover {
+	background-image: url("../img/projects/projecttwo/vision_mockup.png");
+}
+
+#projectTwoImage {
+	background-image: url("../img/projects/projecttwo/vision_image.png");
+}
