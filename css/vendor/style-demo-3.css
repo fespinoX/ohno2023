@@ -1,0 +1,1026 @@
+/**
+Theme Name:Appleo App Landing Page
+Author:Themarlab
+Version:1.0;
+
+*/
+/**
+ * Table of Contents
+ * 1.0 - Fonts
+ * 2.0 - Reset css
+ * 3.0 - navbar
+ * 4.0 - banner
+ * 5.0 - About app
+ * 6.0 - Service
+ * 7.0 - Feature
+ * 8.0 - Screenshot
+ * 9.0 - Customer-testimonial
+ * 10.0 - Team Member
+ * 11.0 - Download
+ * 12.0 - Pricing
+ * 13.0 - Faq
+ * 14.0 - Blog
+ * 15.0 - subscribe
+ * 16.0 - Footer
+ * 17.0 - Responsive css
+ */
+
+/* ==========================================================================
+   1.0 Fonts
+   ========================================================================== */ 
+
+/*sourcesanspro font*/
+@font-face {
+	font-family: 'source_sans_proregular';
+	src:url('../fonts/SourceSansPro/sourcesanspro-regular-webfont.eot');
+	src:url('../fonts/SourceSansPro/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SourceSansPro/sourcesanspro-regular-webfont.woff2') format('woff2'),
+		url('../fonts/SourceSansPro/sourcesanspro-regular-webfont.woff') format('woff'),
+		url('../fonts/SourceSansPro/sourcesanspro-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'source_sans_prolight';
+	src:url('../fonts/SourceSansPro/sourcesanspro-light-webfont.eot');
+	src:url('../fonts/SourceSansPro/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SourceSansPro/sourcesanspro-light-webfont.woff2') format('woff2'),
+		url('../fonts/SourceSansPro/sourcesanspro-light-webfont.woff') format('woff'),
+		url('../fonts/SourceSansPro/sourcesanspro-light-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*open sans font*/
+@font-face {
+	font-family: 'open_sansbold';
+	src:url('../fonts/open-sans/opensans-bold-webfont.eot');
+	src:url('../fonts/open-sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+		url('../fonts/open-sans/opensans-bold-webfont.woff') format('woff'),
+		url('../fonts/open-sans/opensans-bold-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'open_sansregular';
+	src:url('../fonts/open-sans/opensans-regular-webfont.eot');
+	src:url('../fonts/open-sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+		url('../fonts/open-sans/opensans-regular-webfont.woff') format('woff'),
+		url('../fonts/open-sans/opensans-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+/* ==========================================================================
+   2.0 Reset css
+   ========================================================================== */
+html, body { 
+	overflow-x: hidden;
+	font-size: 14px;
+	color: #7d7d7d;
+	font-family:'open_sansregular';
+	line-height: 24px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'source_sans_proregular';
+	margin: 0px;
+}
+ul{
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	outline: 0;
+}
+a:active,
+a:focus { 
+	outline: 0;
+    -moz-outline:0; 
+    background-color: transparent!important;
+}
+a:hover{
+	text-decoration: none;
+}
+section{
+	padding:80px 0px;
+}
+img{
+	max-width:100%; 
+	height: auto;
+}
+#preloader {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should have another color then white */
+	z-index:10000; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	background-image:url(../image/loading.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+section .section-text{
+	padding: 0px 0px 70px 0px;
+}
+
+section .section-heading{
+	font-size: 28px;
+	line-height: 30px;
+	color: #000;
+	text-transform: capitalize;
+	padding-bottom: 15px;
+}
+.nplr{
+	padding: 0px;	
+}
+.npl{
+	padding-left:0px;	
+}
+.npr{
+	padding-right:0px;	
+}
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
+		
+
+/* ==========================================================================
+    3.0 Navbar Styling
+   ========================================================================== */
+.navbar-custom {
+	background-color: transparent;
+	border:none;
+	padding: 15px 0px;
+	-webkit-transition: padding .5s;
+	-moz-transition: padding .5s;
+	transition: padding .5s;
+} 
+.navbar-custom .navbar-brand {
+	padding: 0px;
+}   
+.navbar-custom .navbar-toggle {
+	border: none;
+	border-radius: 0px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 12px;
+	margin-right: 0px;
+}
+.navbar-custom ul li{
+	margin: 0 15px;
+}
+.navbar-custom ul li a{
+	color: #fff;
+	font-family: 'source_sans_proregular';
+	text-transform: capitalize;
+	padding: 10px 0;
+}
+.navbar-custom ul li a:hover{
+	background:transparent; 
+}
+.navbar-custom ul li:last-child a{
+	border: 1px solid #fff;
+	border-radius: 50px;
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px;
+	padding:0 30px 0 30px;
+	line-height: 38px;
+	margin-top: 5px;
+	transition: 0.4s;
+}
+.navbar-custom ul li:last-child a:hover{
+	background:#3a71ff;
+	color: #fff;
+	border-color:#3a71ff; 
+}
+.navbar-nav li a.active{
+	border-bottom: 2px solid #fff;
+}
+
+.navbar-custom.affix{
+	background: -webkit-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, rgba(0,108,225,1), rgba(0,84,220,1));
+	padding: 10px 0px;
+	border-bottom: 0px;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow:0px 0px 5px #000;
+	-moz-box-shadow:0px 0px 5px #000;  
+}
+/* ==========================================================================
+   4.0 Banner Styling
+   ========================================================================== */
+.banner-content{
+	background: rgba(0,84,220, 0.8);
+	padding: 150px 0
+
+}
+.banner-content.video-landing {
+	position: relative;
+	overflow: hidden;
+}
+
+.banner-content.video-landing video {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -100;
+}
+.banner-content .intro-text{
+	padding-top: 100px;
+	color: #fff;
+}
+.banner-content .intro-text p{
+	line-height: 28px;
+	padding-bottom: 30px;
+}
+.banner-content .intro-text .intro-heading{
+	padding-bottom: 30px;
+	font-size: 60px;
+	font-family:'source_sans_prolight';
+}
+.banner-content .intro-text .button a{
+	margin-right: 15px;
+	display: inline-block;
+	text-align: center;
+	background: #fff;
+	border-radius: 50px;
+	width: 150px;
+	line-height: 45px;
+	color: #1967df;
+	font-size: 18px;
+	font-family: 'source_sans_proregular';
+	transition: .5s; 
+}
+.banner-content .intro-text .button a:hover{
+	background: #1967df;
+	color: #fff;
+	box-shadow: 0px 5px 15px #0055dc;
+}
+.banner-content .intro-text .button a i{
+	margin-right: 5px;
+}
+.banner-content .mockup{
+	position: relative;
+}
+.banner-content .mockup img{
+	width: 100%
+}
+/* ==========================================================================
+   5.0 About Styling
+   ========================================================================== */
+.about-app{
+	background: #f2f2f2;
+}
+.about-app .abt-text{
+	padding-top: 100px;
+}
+.about-app .abt-text h2{
+	color: #000;
+	padding-bottom: 25px;
+}
+.about-app .abt-text .counter-wrapper{
+	margin-top: 25px;
+}
+.about-app .abt-text .counter-wrapper li{
+	display: inline-block;
+	border-right: 1px solid #959595;
+	padding: 0 40px;
+}
+.about-app .abt-text .counter-wrapper li:first-child{
+	padding-left: 0px;
+}
+.about-app .abt-text .counter-wrapper li:last-child{
+	border-right:none;
+}
+.about-app .abt-text .counter-wrapper li span{
+	display: inline-block;
+	line-height: 18px;
+	color: #000;
+}
+.about-app .abt-text .counter-wrapper li .counter{
+	font-size: 48px;
+	font-family: 'source_sans_prolight';
+	margin-right: 10px;
+}
+.about-app .abt-text a.btn{
+	display: block;
+	text-align: center;
+	background: #1965df;
+	border-radius: 50px;
+	width: 150px;
+	line-height: 35px;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'source_sans_proregular';
+	margin-top: 25px; 
+	transition: .5s;
+}
+.about-app .abt-text a.btn:hover{
+	box-shadow: 0px 5px 15px #0055dc;
+}
+/* ==========================================================================
+    6.0 Service Styling
+   ========================================================================== */
+.service .service-colum{
+	margin-bottom: 35px;
+}
+.service .service-colum .service-icon{
+	margin-bottom: 20px;
+} 
+.service .service-colum .service-text h4{
+	color: #000;
+	font-size: 20px;
+	margin: 0px;
+	text-transform: capitalize;
+} 
+.service .service-colum .service-text p{
+	padding-top:16px; 
+}
+/* ==========================================================================
+    7.0 Feature Styling
+   ========================================================================== */ 
+section.feature .section-heading{
+	color: #fff;
+}
+.feature{
+	background:transparent;
+	color: #fff;
+}
+.feature .feature-holder .feature-mockup img{
+	max-width: 100%;
+}
+
+.feature .feature-holder .left-feature .icon{
+	float: right;
+}
+.feature .feature-holder .left-feature .feature-text{
+	margin-right: 70px;
+}
+.feature .feature-holder .right-feature .icon{
+	float: left;
+}
+.feature .feature-holder .right-feature .feature-text{
+	margin-left: 70px;
+}
+.feature .feature-holder .left-feature{
+	margin-top: 13%;
+	text-align: right;
+}
+.feature .feature-holder .right-feature{
+	margin-top: 13%;
+}
+.feature .feature-holder .feature-list{
+	margin-top: 40px;
+}
+.feature .feature-holder .feature-list .icon{
+	font-size: 18px;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 45px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.feature .feature-holder .feature-list .icon:hover{
+	background: #fff;
+	color: #1967df;
+}
+.feature .feature-holder .feature-list .feature-title{
+	font-family: 'source_sans_proregular';
+	font-size: 22px;
+	padding-top: 5px;
+}
+.feature .feature-holder .feature-list p{
+	padding-top: 20px;
+}
+/* ==========================================================================
+   8.0 Screenshot Styling
+   ========================================================================== */
+
+/****************ow-carousel*****************/
+.screenshot .owl-theme .owl-item{
+	-webkit-transition: all 200ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+	-moz-transition: all 200ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+	-ms-transition: all 200ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+	-o-transition: all 200ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+	transition: all 200ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+.screenshot .owl-theme .owl-item{
+	transform: scale(0.7);
+}
+.screenshot .owl-theme .owl-item.active.center{
+	transform: scale(0.9);
+}
+.screenshot .owl-theme .owl-dots{
+	text-align: center;
+}
+.screenshot .owl-theme .owl-dots .owl-dot{
+	display: inline-block;
+}
+.screenshot .owl-theme .owl-dots .owl-dot.active span{
+	background: #3a71ff;
+}
+.screenshot .owl-dot span{
+	width: 20px;
+	height: 4px;
+	display: block;
+	background: #d7d7d7;
+	margin:0px 3px;
+}   
+/* ==========================================================================
+   9.0 testimonial Styling
+   ========================================================================== */
+.testimonial{
+	color: #fff;
+}
+.testimonial .owl-theme .owl-item .testimonial-wrapper{
+	text-align: center;
+}
+.testimonial .owl-theme .owl-item.active.center .testimonial-wrapper{
+	box-shadow: 0px 0px 10px #0055dc;
+	-webkit-box-shadow:0px 0px 10px #0055dc;
+	-moz-box-shadow:0px 0px 10px #0055dc;
+	padding: 30px;
+	background: #006ce2;
+}
+.testimonial .owl-theme .owl-item.active.center{
+	opacity: 1;
+	padding: 20px;
+}
+.testimonial .owl-theme .owl-item{
+	padding: 50px;
+	opacity: 0.2;
+}
+.testimonial .owl-theme .owl-item h4{
+	font-size: 24px;
+	margin-bottom: 3px;
+	margin-top: 5px;
+}
+.testimonial .owl-theme .owl-item h5{
+	margin-bottom:15px; 
+}
+.testimonial .owl-theme .owl-item img{
+	height: 70px;
+	width: 70px;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	display: block;
+	margin: 0 auto;
+}
+.testimonial .owl-theme .owl-dots{
+	text-align: center;
+}
+.testimonial .owl-theme .owl-dots .owl-dot{
+	display: inline-block;
+}
+.testimonial .owl-theme .owl-dot.active span{
+	background: #fff;
+}
+.testimonial .owl-dot span{
+	width: 20px;
+	height: 4px;
+	display: block;
+	background: #c0bfbf;
+	margin:0px 3px;
+} 
+/* ==========================================================================
+  10.0  Team Member Styling
+   ========================================================================== */
+.team-member{
+	border-bottom:1px solid #ccc;
+}
+.team-mem-col{
+}
+.team-mem-col img{
+	width: 100%;
+}
+.team-mem-col .link{
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.team-mem-col .member-name h4{
+	font-size:18px;
+	font-family: 'open_sansregular' !important;
+	color: #000;
+	padding-top: 20px;
+	padding-bottom: 5px; 
+}
+.team-mem-col .member-name p{
+	font-size:14px;
+	color: #959595;
+	font-family: 'open_sansbold'; 
+	margin: 0px !important; 
+}
+.team-mem-col .team-hover{
+	background: rgba(255,255,255,0.9);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+	-webkit-transition:opacity 0.5s ease-out;
+	-moz-transition:opacity 0.5s ease-out;
+}
+.team-mem-col .team-hover .team-hover-content{
+	padding: 100px 20px;
+	color: #fff;
+}
+.team-mem-col .team-hover .team-hover-content h4{
+	font-size: 18px;
+	font-family: 'open_sansregular' !important;
+}
+.team-mem-col .team-hover .team-hover-content p{
+	padding-top: 20px;
+	color: #000;
+	font-size: 12px;
+	line-height: 20px;
+}
+.team-mem-col .team-hover .team-hover-content .extra-link{
+	font-size: 10px;
+	width: 100%;
+}
+.team-mem-col .team-hover .team-hover-content i{
+	background: transparent;
+	border: 1px solid #006ae1;
+	padding: 10px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50px;
+	margin-right: 10px;
+	color: #3a71ff;
+}
+.team-mem-col .team-hover .team-hover-content i:hover{
+	background:#006ae1;
+	color: #fff; 
+}
+.team-mem-col .link:hover .team-hover{
+	opacity:1;  
+}
+/* ==========================================================================
+   11.0 Download Styling
+   ========================================================================== */
+.download{
+	background: -webkit-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, rgba(0,108,225,1), rgba(0,84,220,1));
+	color: #fff;
+	text-align: center;
+}
+.download h2{
+	font-family: 'source_sans_prolight';
+	line-height: 40px;
+}
+.download .button{
+	margin-top: 30px;
+}
+.download .button a{
+	margin-right: 15px;
+	display: inline-block;
+	text-align: center;
+	background: #fff;
+	border-radius: 50px;
+	width: 150px;
+	line-height: 45px;
+	color: #1967df;
+	font-size: 18px;
+	font-family: 'source_sans_proregular';
+	transition: .5s; 
+}
+.download a:hover{
+	background: #1967df;
+	color: #fff;
+	box-shadow: 0px 5px 15px #0055dc;
+}
+.download a i{
+	margin-right: 5px;
+}
+/* ==========================================================================
+   12.0 Pricing Styling
+   ========================================================================== */    
+.pricing{
+	border-bottom: 1px solid #e1e1e1;
+}
+.pricing-wrapper{
+	text-align: center;
+}
+.pricing-table:hover{
+	box-shadow: 0px 2px 5px #888888;
+}
+.pricing-table{
+	border: 1px solid #e1e1e1;
+
+}
+.pricing-table.popular-table{
+	background: #006ae1;
+	border:1px solid #006ae1;
+}
+.pricing-table.popular-table .pricing-footer a,
+.pricing-table.popular-table .pricing-header, 
+.pricing-table.popular-table .pricing-content .main-pricing h4,
+.pricing-table.popular-table .pricing-content .main-pricing p,
+.pricing-table.popular-table .pricing-content .pricing-feature li{
+	color:#fff;
+}
+
+.pricing-table.popular-table .pricing-footer a{
+	border-color:#fff;
+}
+
+.pricing-wrapper .pricing-content .main-pricing{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.pricing-wrapper .pricing-header{
+	padding:15px;
+	font-size: 20px;
+	color: #000;
+	font-family: 'open_sansbold';
+}
+.pricing-wrapper .pricing-content .main-pricing h4{
+	font-size: 36px;
+	color:#000;
+	font-family: 'open_sansbold';
+	margin: 0px;
+}
+.pricing-wrapper .pricing-content .main-pricing p{
+	font-family: 'open_sansregular';
+	font-size: 18px;
+	color: #959595;
+	margin: 0px !important;
+}
+.pricing-wrapper .pricing-content .pricing-feature li{
+	font-family: 'open_sansregular';
+	font-size: 14px;
+	color: #636363;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.pricing-wrapper .pricing-footer{
+	margin:50px 0px;
+}
+.pricing-wrapper .pricing-footer a{
+	font-family: 'open_sansbold';
+	display:inline-block;
+	padding: 15px 25px;
+	margin-top: 50px;
+	border:1px solid #000;
+	color: #000;
+	margin: 0px;
+	background: transparent;
+	border-radius: 50px;
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px;
+
+}
+/* ==========================================================================
+   13.0  Faq Styling
+   ========================================================================== */
+.faq-sec{
+	background: #f1f1f1;
+}    
+.faq-sec .panel-group{
+	margin-top: 100px;
+}
+.faq-sec .panel-group .panel {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.faq-sec .panel-default > .panel-heading {
+	padding: 0;
+	border-radius: 0;
+	color: #212121;
+	background-color: #FAFAFA;
+	border-color: #EEEEEE;
+}
+
+.faq-sec .panel-title {
+	font-size: 14px;
+}
+
+.faq-sec .panel-title > a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+}
+
+.faq-sec .more-less {
+	float: right;
+	color: #212121;
+}
+
+.faq-sec .panel-default > .panel-heading + .panel-collapse > .panel-body {
+	border-top-color: #EEEEEE;
+}
+/* ==========================================================================
+   14.0  blog Styling
+   ========================================================================== */ 
+.blog .blog-col .blog-text{
+	padding: 30px;
+	background: #f9f9f9;
+}
+.blog .blog-col img{
+	width: 100%;
+}
+.blog .blog-col .blog-text h4{
+	font-size: 20px;
+	color: #000;
+	padding: 0px 0 8px 0;
+}
+.blog .blog-col .blog-text a{
+	display: block;
+	text-align: center;
+	padding: 5px 0;
+	border:1px solid #1967df;
+	width: 90px;
+	color: #1967df;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+.blog .blog-col .blog-text a:hover{
+	color: #fff;
+	background: -webkit-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, rgba(0,108,225,1), rgba(0,84,220,1));
+}
+/* ==========================================================================
+   15.0  subscribe Styling
+   ========================================================================== */     
+.subscribe{
+	background: -webkit-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, rgba(0,108,225,1), rgba(0,84,220,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, rgba(0,108,225,1), rgba(0,84,220,1));
+}
+.subscribe .section-text .section-heading{
+	color: #fff;
+}
+.subscribe .section-text p{
+	color: #fff;
+}
+.subscribe .custom-form{
+	position: relative;
+}
+.subscribe .custom-form label{
+	position: absolute;
+	top: 25%;
+	color: #fff;
+	font-size: 30px;
+	margin-left: 25px;
+}
+.subscribe .custom-form .form-control{
+	height: 65px;
+	background-color: transparent;
+	border-radius: 50px;
+	padding: 0 200px 0 70px;
+	color: #fff;
+	font-size: 18px;
+}
+.subscribe .custom-form button{
+	padding: 12px 40px;
+	background: #3a71ff;
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	border-radius: 50px;
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px;
+	position: absolute;
+	top: 7px;
+	right: 23px;
+	font-variant: 'source_sans_prosemibold';
+}
+/* ==========================================================================
+   16.0 Footer Styling
+   ========================================================================== */
+.footer-wrapper{
+	background: #20242f;
+	padding: 50px 0px;
+}
+.footer-wrapper .social-holder{
+	text-align: center;
+}
+.footer-wrapper .social-holder a{
+	margin-right: 15px;
+}
+.footer-wrapper .social-holder a:last-child{
+	margin-right: 0px;
+}
+.footer-wrapper .social-holder i{
+	font-size: 14px;
+	height: 30px;
+	width: 30px;
+	background: #e1e1e1;
+	color: #636363;
+	border-radius: 50px;
+	padding: 9px;
+
+}
+.footer-wrapper .copyright{
+	font-size: 14px;
+	color: #b7b7b7;
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   17.0 Responsive CSS
+   ========================================================================== */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.feature .feature-holder .left-feature{
+		padding-left: 20px;
+	}
+	.feature .feature-holder .right-feature{
+		padding-right: 20px;
+	}	
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	body{
+		font-size: 12px;
+	}
+	section{
+		padding: 40px 0px;
+	}
+	section .section-text{
+		padding:0px 0px 30px 0px;
+	}
+	.navbar-custom ul li {
+		margin: 0 10px;
+	}	
+	.banner-content{
+		padding:130px 0;
+		overflow: hidden; 
+	}
+	.banner-content .intro-text{
+		z-index: 1;
+		padding-top: 0px;
+	}
+
+	.about-app .abt-text {
+	    padding-top: 10px;
+	}
+	.feature .section-text {
+	    padding: 0 40px 10px 40px;
+	}
+	.feature .feature-holder .left-feature .feature-text {
+	    margin-left: 70px;
+	    margin-right: 0px;
+	}
+	.feature .feature-holder .left-feature{
+		text-align: left;
+		margin-top: 0px;
+	}
+	.feature .feature-holder .left-feature .icon {
+	    float: left;
+	}
+	.feature .feature-holder .right-feature{
+		margin-top: 0px;
+	}
+	.feature .feature-holder .feature-mockup img{
+		margin-left: 0px;
+	}
+	.navbar-custom .navbar-nav > li > a {
+		font-size:12px; 
+	}
+	.faq-sec .panel-group{
+		margin-top: 0px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	section{
+		padding: 30px 0px;
+	}
+	section .section-text {
+		padding: 0px 40px 40px 40px;
+	}
+
+	.navbar-nav li a.active, .navbar-custom ul li a:hover {
+		border-bottom: 0px;
+	}
+	.banner-content .intro-text .intro-heading{
+		font-size: 40px;
+	}
+	.banner-content .intro-text .button a {
+		padding: 0;
+		margin-top: 25px;
+	}
+	.intro-text{
+		text-align:center; 	
+	}
+	.about-app .abt-text .counter-wrapper li {
+		display: block;
+		border-right: 0px;
+		padding:10px 0 0 0;
+	}
+	.feature {
+		margin-bottom:0px;
+	}
+	.feature .feature-holder {
+		margin-top: 0px;
+		padding: 0 20px;
+	}
+	.navbar-custom .navbar-brand{
+		padding-top: 15px;
+	}
+	.navbar-brand img{
+		width: 130px;
+	}	
+	.navbar-custom, .navbar-custom.affix{
+		background-color: #1c72f6;
+		padding: 0px 15px;
+		box-shadow: 0px 0px 5px #000;
+		-webkit-box-shadow:0px 0px 5px #000;
+		-moz-box-shadow:0px 0px 5px #000;
+	}
+	.navbar li{
+		text-align: center;
+	}
+	.subscribe .custom-form button{
+		padding: 12px 14px;
+		font-size: 14px;
+		top: 10px;
+	}
+	.download h2 {		line-height: 30px;
+		font-size: 24px;
+	}
+	.res-margin{
+		margin-bottom: 40px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.banner-content{
+		min-height: 600px;
+	}
+	.banner-content .intro-text {
+		padding-top: 60px;
+	}
+	.banner-content .mockup {
+		margin-top: -280px;
+	}
+	.about-app .mockup-abt img{
+		width: 100%;
+	}
+	.container{
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.download .button a:first-child{
+		margin-bottom: 5px;
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 360px) {
+	.navbar-brand img{
+		width: 130px;
+	}
+}

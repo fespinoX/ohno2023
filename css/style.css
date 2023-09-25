@@ -204,6 +204,19 @@ Landing page
 	margin-right: 15px;
 }
 
+@media only screen and (max-width: 767px) {
+	.header .logo-container a {
+		max-width: 80px;
+	}
+
+	.menu li {
+		display: block;
+		margin-right: 0;
+	}
+}
+
+
+
 .menu li:hover {
 	cursor: pointer;
 }
@@ -245,15 +258,32 @@ Landing page
 
 #projects {
 	padding: 100px 0;
+	background-color: #2d2d2d;
 }
 
 .project-row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100vw;
 }
 
 .project-content {
 	width: 33.33vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	background-size: cover;
+	background-position: center center;
+	text-decoration: none;
+}
+
+.project-content-large {
+	width: 66.66vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
 	background-color: transparent;
@@ -266,12 +296,12 @@ Landing page
 #projectTwo,
 #projectThree,
 #projectFour,
-#projectFive,
-#projectSix {
+#projectFive {
 	display: inline-block;
 	position: relative;
-	width: 50%;
+	width: 33.33%;
 }
+
 #projectOne:after,
 #projectTwo:after,
 #projectThree:after,
@@ -318,6 +348,29 @@ Landing page
 	transition: background 1s;
 }
 
+@media only screen and (max-width: 767px) {
+	.project-row {
+		-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.project-content,
+	.project-content-large {
+		width: 100vw;
+	}
+
+	#projectOne,
+	#projectTwo,
+	#projectThree,
+	#projectFour,
+	#projectFive,
+	#projectSix {
+		width: auto;
+	}
+}
+
+
 #projectOneContent {
 	background-image: url("../img/projects/thumbnails/project-one.png");
 }
@@ -335,35 +388,29 @@ Landing page
 }
 
 #projectThreeContent {
-	background-image: url("https://placekitten.com/g/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-three.png");
 }
 
 #projectThreeContent:hover {
-	background-image: url("https://placekitten.com/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-three-hover.png");
 }
 
 #projectFourContent {
-	background-image: url("https://placekitten.com/g/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-four.png");
 }
 
 #projectFourContent:hover {
-	background-image: url("https://placekitten.com/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-four-hover.png");
 }
 
+
+
 #projectFiveContent {
-	background-image: url("https://placekitten.com/g/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-five.png");
 }
 
 #projectFiveContent:hover {
-	background-image: url("https://placekitten.com/1000/1000");
-}
-
-#projectSixContent {
-	background-image: url("https://placekitten.com/g/1000/1000");
-}
-
-#projectSixContent:hover {
-	background-image: url("https://placekitten.com/1000/1000");
+	background-image: url("../img/projects/thumbnails/project-five-hover.png");
 }
 
 
@@ -373,32 +420,6 @@ Landing page
 	padding: 100px 0;
 	background-image: url("../img/vhs.jpg");
 }
-
-
-/* BTT */
-
-#myBtn,
-#myOtherBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
-
-#myBtn:hover,
-#myOtherBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-}
-
 
 
 
@@ -419,7 +440,7 @@ Project
 }
 
 .project-cover {
-	height: 600px;
+	height: 767px;
 	background-size: cover;
 	background-position: center center;
 }
@@ -434,9 +455,23 @@ Project
 	color: #2d2d2d;
 }
 
+@media only screen and (max-width: 767px) {
+	.project-name {
+		font-size: 1.4rem;
+	}
+}
+
 .project-description {
 	font-size: 1.2rem;
 	font-weight: 300;
+}
+
+.project-link {
+	display: inline-block;
+	font-size: 1.2rem;
+	font-weight: 400;
+	background-color: #FF7E7E;
+	color: #2d2d2d;
 }
 
 .project-info {
@@ -459,6 +494,22 @@ Project
 	background-position: left center;
 }
 
+@media only screen and (max-width: 767px) {
+	.project-info {
+		padding: 50px 0;
+	}
+
+	.project-info .text-end,
+	.other-projects .text-end {
+		text-align: left!important;
+	}
+
+	.project-image {
+    height: 200px;
+    background-size: contain;
+	}
+}
+
 .project-goal-title {
 	display: inline-block;
 	margin-bottom: 10px;
@@ -470,7 +521,8 @@ Project
 }
 
 .project-goal,
-.project-users {
+.project-users,
+.other-projects {
 	padding: 50px 0;
 }
 
@@ -490,9 +542,24 @@ Project
 	background-image: url("../img/users.png");
 }
 
-.process-image img {
-	max-width: 100%;
+.process-image {
+	height: 100%;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("../img/process.png");
 }
+
+.process-title {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	background-color: #FFE600;
+	color: #2d2d2d;
+}
+
 
 /* Menu */
 
@@ -513,9 +580,35 @@ Project
 /* Project two images */
 
 #projectTwoCover {
-	background-image: url("../img/projects/projecttwo/vision_mockup.png");
+	background-image: url("../img/projects/projecttwo/platform_mockup.png");
 }
 
 #projectTwoImage {
-	background-image: url("../img/projects/projecttwo/vision_image.png");
+	background-image: url("../img/projects/projecttwo/platform_image.png");
+}
+
+/* Project three images */
+
+#projectThreeCover {
+	background-image: url("../img/projects/projectthree/trailblazer_mockup.png");
+}
+
+#projectThreeImage {
+	background-image: url("../img/projects/projectthree/trailblazer_image.png");
+}
+
+/* Project four images */
+
+#projectFourCover {
+	background-image: url("../img/projects/projectfour/IDB_mockup.png");
+}
+
+#projectFourImage {
+	background-image: url("../img/projects/projectfour/IDB_image.png");
+}
+
+/* Project five images */
+
+#projectFiveCover {
+	background-image: url("../img/projects/projectfive/other_mockup.png");
 }
