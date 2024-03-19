@@ -55,7 +55,7 @@
 	html h4,
 	html a {
 		font-family: 'Roboto', sans-serif;
-		color: #2d2d2d;
+		color: #07161e;
 	}
 	
 	input:-webkit-autofill,
@@ -81,7 +81,7 @@ General
 html{scroll-behavior:smooth}
 
 body {
-	background-color: #FFE600;
+	background-color: #07161e;
 }
 
 .height-100 {
@@ -96,11 +96,11 @@ body {
 	line-height: 1.5rem;
 	font-weight: 300;
 	color: #FFF;
-	background: #2d2d2d;
+	background: #07161e;
 }
 
 .sick {
-	color: #FFE600;
+	color: #ffd900;
 	font-weight: 500;
 }
 
@@ -123,22 +123,14 @@ body {
 	font-weight: 300;
 }
 
-.xl-heavy {
-	font-size: 4.5rem;
-	font-weight: 700;
-}
-
-.m-highlight {
-	display: inline-block;
-	background-color: #FF7E7E;
-	color: #FFF;
-	font-size: 2rem;
-	font-weight: 300;
+.l-normal {
+	font-size: 3rem;
+	font-weight: 500;
 }
 
 .text-highlight {
-	background-color: #FF7E7E;
-	color: #2d2d2d;
+	background-color: #E75778;
+	color: #07161e;
 	font-weight: 500;
 }
 
@@ -166,8 +158,9 @@ h4,
 	display: inline-block;
 	margin-bottom: 10px;
 	padding-right: 15px;
-	background-color: #FFE600;
+	background-color: #ffd900;
 	font-weight: 500;
+	font-family: "Pixelify Sans", sans-serif;
 }
 
 .title-highlight {
@@ -177,20 +170,43 @@ h4,
 	background-color: #310D23;
 	color: #FFF;
 	font-weight: 500;
+	font-family: "Pixelify Sans", sans-serif;
 }
+
+
 
 /* 
 Landing page 
 *
+*
+*
 */
+
+/* Main Jumbotron */
+
+@keyframes changeBackground {
+    0% { background-image: url("../img/backgrounds/main_bg_1.png"); }
+    33.33% { background-image: url("../img/backgrounds/main_bg_2.png"); }
+    66.66% { background-image: url("../img/backgrounds/main_bg_3.png"); }
+    100% { background-image: url("../img/backgrounds/main_bg_1.png"); } /* Back to the first image */
+}
+
+#home {
+	height: 600px;
+	padding: 50px;
+	animation: changeBackground 2s infinite;
+	background-image: url(../img/backgrounds/main_bg_1.png);
+	background-repeat: repeat;
+	background-position: center;
+}
 
 /* Menu */
 
-.header {
+.menu-row {
 	margin: 20px 0;
 }
 
-.header .logo-container a {
+.menu-row .logo-container a {
 	max-width: 100%;
 	display: block;
 }
@@ -201,14 +217,24 @@ Landing page
 
 .menu li {
 	display: inline-block;
-	margin-right: 15px;
+	margin: 0 20px;
+	padding-bottom: 10px;
 }
 
-@media only screen and (max-width: 767px) {
-	.header .logo-container a {
-		max-width: 80px;
-	}
+.menu li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Pixelify Sans", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #FFF;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
 
+
+@media only screen and (max-width: 767px) {
 	.menu li {
 		display: block;
 		margin-right: 0;
@@ -216,27 +242,36 @@ Landing page
 }
 
 
-
 .menu li:hover {
 	cursor: pointer;
 }
 
-.menu li a {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	color: #2d2d2d;
-}
-
 .menu li a:hover {
-	color: #FF7E7E;
+	color: #E75778;
 }
-
 
 /* Presentation */
 
-#presentation {
-	padding: 200px 0;
+.presentation-row {
+	padding: 60px 0;
+}
+
+.cover-name {
+	font-size: 12rem;
+	font-weight: 700;
+	font-family: "Pixelify Sans", sans-serif;
+	color: #FFF;
+}
+
+.name-highlight {
+	display: inline-block;
+	padding: 0 40px;
+	font-family: "Pixelify Sans", sans-serif;
+	text-transform: uppercase;
+	background-color: #e75778;
+	color: #FFF;
+	font-size: 2rem;
+	font-weight: 400;
 }
 
 
@@ -258,7 +293,7 @@ Landing page
 
 #projects {
 	padding: 100px 0;
-	background-color: #2d2d2d;
+	background-color: #07161e;
 }
 
 .project-row {
@@ -280,8 +315,11 @@ Landing page
 	text-decoration: none;
 }
 
+.project-content:hover {
+	cursor: pointer;
+}
+
 .project-content-large {
-	width: 66.66vw;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -294,20 +332,23 @@ Landing page
 
 #projectOne,
 #projectTwo,
-#projectThree,
-#projectFour,
-#projectFive {
+#projectThree {
 	display: inline-block;
 	position: relative;
 	width: 33.33%;
 }
 
+#projectFour {
+	height: 400px;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+}
+
 #projectOne:after,
 #projectTwo:after,
 #projectThree:after,
-#projectFour:after,
-#projectFive:after,
-#projectSix:after {
+#projectFour:after {
 	content: '';
 	display: block;
 	margin-top: 75%;
@@ -315,9 +356,7 @@ Landing page
 #projectOneContent,
 #projectTwoContent,
 #projectThreeContent,
-#projectFourContent,
-#projectFiveContent,
-#projectSixContent {
+#projectFourContent {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -333,9 +372,7 @@ Landing page
 #projectOneContent,
 #projectTwoContent,
 #projectThreeContent,
-#projectFourContent,
-#projectFiveContent,
-#projectSixContent {
+#projectFourContent {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -363,55 +400,43 @@ Landing page
 	#projectOne,
 	#projectTwo,
 	#projectThree,
-	#projectFour,
-	#projectFive,
-	#projectSix {
+	#projectFour {
 		width: auto;
 	}
 }
 
-
 #projectOneContent {
-	background-image: url("../img/projects/thumbnails/project-one.png");
+	background-image: url("../img/projects/thumbnails/design_systems_empty.png");
 }
 
 #projectOneContent:hover {
-	background-image: url("../img/projects/thumbnails/project-one-hover.png");
+	background-image: url("../img/projects/thumbnails/design_systems.png");
 }
 
 #projectTwoContent {
-	background-image: url("../img/projects/thumbnails/project-two.png");
+	background-image: url("../img/projects/thumbnails/ss_platforms_empty.png");
 }
 
 #projectTwoContent:hover {
-	background-image: url("../img/projects/thumbnails/project-two-hover.png");
+	background-image: url("../img/projects/thumbnails/ss_platforms.png");
 }
 
 #projectThreeContent {
-	background-image: url("../img/projects/thumbnails/project-three.png");
+	background-image: url("../img/projects/thumbnails/ai_projects_empty.png");
 }
 
 #projectThreeContent:hover {
-	background-image: url("../img/projects/thumbnails/project-three-hover.png");
+	background-image: url("../img/projects/thumbnails/ai_projects.png");
 }
 
 #projectFourContent {
-	background-image: url("../img/projects/thumbnails/project-four.png");
+	background-image: url("../img/projects/thumbnails/other_projects_empty.png");
 }
 
 #projectFourContent:hover {
-	background-image: url("../img/projects/thumbnails/project-four-hover.png");
+	background-image: url("../img/projects/thumbnails/other_projects.png");
 }
 
-
-
-#projectFiveContent {
-	background-image: url("../img/projects/thumbnails/project-five.png");
-}
-
-#projectFiveContent:hover {
-	background-image: url("../img/projects/thumbnails/project-five-hover.png");
-}
 
 
 /* Contact */
@@ -432,11 +457,11 @@ Project
 /* General */
 
 .header-project .menu li a:hover {
-	color: #FFE600;
+	color: #ffd900;
 }
 
 .projects {
-	background-color: #2d2d2d;
+	background-color: #07161e;
 }
 
 .project-cover {
@@ -447,12 +472,14 @@ Project
 
 .project-name {
 	display: inline-block;
+	margin-top: 200px;
 	padding: 0 30px;
 	font-size: 1.6rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	background-color: #FFE600;
-	color: #2d2d2d;
+	background-color: #ffd900;
+	color: #07161e;
+	font-family: "Pixelify Sans", sans-serif;
 }
 
 @media only screen and (max-width: 767px) {
@@ -470,8 +497,8 @@ Project
 	display: inline-block;
 	font-size: 1.2rem;
 	font-weight: 400;
-	background-color: #FF7E7E;
-	color: #2d2d2d;
+	background-color: #E75778;
+	color: #07161e;
 }
 
 .project-info {
@@ -485,8 +512,8 @@ Project
 	padding-left: 20px;
 	font-size: 1.5rem;
 	font-weight: 600;
-	background-color: #FF7E7E;
-	color: #2d2d2d;
+	background-color: #E75778;
+	color: #07161e;
 }
 
 .project-image {
@@ -516,8 +543,8 @@ Project
 	padding-right: 20px;
 	font-size: 1.5rem;
 	font-weight: 600;
-	background-color: #FFE600;
-	color: #2d2d2d;
+	background-color: #ffd900;
+	color: #07161e;
 }
 
 .project-goal,
@@ -556,8 +583,8 @@ Project
 	padding: 0 20px;
 	font-size: 1.5rem;
 	font-weight: 600;
-	background-color: #FFE600;
-	color: #2d2d2d;
+	background-color: #ffd900;
+	color: #07161e;
 }
 
 

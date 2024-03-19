@@ -1,0 +1,241 @@
+/* 
+Reset CSS
+*
+*/
+
+html, body, section,div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font: inherit;
+    vertical-align: baseline;  
+    box-sizing: content-box;  
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+html p, 
+html span,
+html li,
+html h1,
+html h2,
+html h3,
+html h4,
+html a {
+    font-family: 'Roboto', sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* 
+Chat GPT
+*
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+}
+th {
+    background-color: #333;
+}
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #444;
+    color: #fff;
+}
+.add-btn,
+.calc-btn,
+.delete-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.add-btn:hover,
+.calc-btn:hover,
+.delete-btn:hover {
+    background-color: #45a049;
+}
+.result {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.convenient {
+    background-color: #ffba00;
+}
+
+.convenient td:last-of-type {
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+@media screen and (max-width: 1100px) {
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    tbody, tr, td {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    td {
+        border: none !important;
+        padding: 8px 0 !important;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ffba00;
+        border-radius: 10px;
+    }
+
+    .delete-btn {
+        width: 100%;
+    }
+
+}
+
+
+
+/* 
+Fixes
+*
+*/
+
+body {
+    width: 100vw;
+}
+
+.calculator {
+    max-width: 100%;
+    padding: 50px 20px;
+}
+
+/* 
+Estilitos
+*
+*/
+
+
+.add-btn {
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    background-color: transparent;
+}
+
+.add-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    border: 2px solid #fc073c;
+    color: #fc073c;
+    background-color: transparent;
+}
+
+.delete-btn:hover {
+    background-color: #fc073c;
+    color: white;
+}
+
+.calculate-cont {
+    margin-top: 30px;
+}

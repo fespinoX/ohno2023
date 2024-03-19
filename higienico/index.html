@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="OHNO! Fespi - UI/UX designer">
+        <meta property="og:description" content="OHNO! Fespi - UI/UX designer">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.ohno.com.ar/">
+        <meta property="og:image" content="img/eu.png">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculadora de Papel Higiénico</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+  	
+		<section class="calculator">
+            
+        
+            
+            <div class="container">
+                <h2>¿Qué papel higiénico compro?</h2>
+
+                <table id="tpTable">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Precio ($)</th>
+                            <th>Metros</th>
+                            <th>Tipo</th>
+                            <th>Cantidad de Rollos</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="brand[]" placeholder="Marca"></td>
+                            <td><input type="number" name="price[]" step="0.01" placeholder="Precio ($)"></td>
+                            <td><input type="number" name="meters[]" step="1" placeholder="Metros"></td>
+                            <td>
+                                <select name="fold[]">
+                                    <option value="single">Simple Hoja</option>
+                                    <option value="double">Doble Hoja</option>
+                                </select>
+                            </td>
+                            <td><input type="number" name="rolls[]" step="1" placeholder="Cantidad de Rollos"></td>
+                            <td><button class="delete-btn" onclick="deleteRow(this)">Borrar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>
+                    <button class="add-btn" onclick="addEntry()">Agregar Marca</button>
+                </div>
+                
+            </div>
+            
+
+            <div class="calculate-cont">
+                <button class="calc-btn" onclick="calculate()">Calcular</button>
+            </div>
+
+            <p id="result" class="result"></p>
+
+
+        </section>
+  	
+	    <script src="script.js"></script>
+    </body>
+</html>
