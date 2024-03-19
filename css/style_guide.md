@@ -1,6 +1,6 @@
 # colors
 White: #FFF
-Black: #07161E
+Black: #101010
 Pink: #E75778
 Yellow: #FFD900
 

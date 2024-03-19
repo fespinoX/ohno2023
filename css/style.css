@@ -55,7 +55,7 @@
 	html h4,
 	html a {
 		font-family: 'Roboto', sans-serif;
-		color: #07161e;
+		color: #101010;
 	}
 	
 	input:-webkit-autofill,
@@ -81,7 +81,7 @@ General
 html{scroll-behavior:smooth}
 
 body {
-	background-color: #07161e;
+	background-color: #101010;
 }
 
 .height-100 {
@@ -89,14 +89,14 @@ body {
 }
 
 .ghost-text {
-	display: inline-block;
+	display: block;
 	margin: 5px 0;
 	padding: 2px;
 	font-size: 1rem;
 	line-height: 1.5rem;
 	font-weight: 300;
 	color: #FFF;
-	background: #07161e;
+	background: #101010;
 }
 
 .sick {
@@ -130,7 +130,7 @@ body {
 
 .text-highlight {
 	background-color: #E75778;
-	color: #07161e;
+	color: #101010;
 	font-weight: 500;
 }
 
@@ -202,7 +202,7 @@ Landing page
 
 /* Menu */
 
-.menu-row {
+.menu {
 	margin: 20px 0;
 }
 
@@ -293,7 +293,7 @@ Landing page
 
 #projects {
 	padding: 100px 0;
-	background-color: #07161e;
+	background-color: #101010;
 }
 
 .project-row {
@@ -303,22 +303,7 @@ Landing page
 	width: 100vw;
 }
 
-.project-content {
-	width: 33.33vw;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	align-items: center;
-	background-color: transparent;
-	background-size: cover;
-	background-position: center center;
-	text-decoration: none;
-}
-
-.project-content:hover {
-	cursor: pointer;
-}
-
+.project-content,
 .project-content-large {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -326,8 +311,21 @@ Landing page
 	align-items: center;
 	background-color: transparent;
 	background-size: cover;
-	background-position: center center;
+	background-position: bottom center;
 	text-decoration: none;
+}
+
+.project-content-large {
+	background-position: center center;
+}
+
+.project-content:hover,
+.project-content-large:hover {
+	cursor: pointer;
+}
+
+.project-content {
+	width: 33.33vw;
 }
 
 #projectOne,
@@ -339,7 +337,7 @@ Landing page
 }
 
 #projectFour {
-	height: 400px;
+	height: 450px;
 	display: inline-block;
 	position: relative;
 	width: 100%;
@@ -461,11 +459,11 @@ Project
 }
 
 .projects {
-	background-color: #07161e;
+	background-color: #101010;
 }
 
 .project-cover {
-	height: 767px;
+	height: 500px;
 	background-size: cover;
 	background-position: center center;
 }
@@ -474,11 +472,11 @@ Project
 	display: inline-block;
 	margin-top: 200px;
 	padding: 0 30px;
-	font-size: 1.6rem;
+	font-size: 2rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	background-color: #ffd900;
-	color: #07161e;
+	color: #101010;
 	font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -490,15 +488,24 @@ Project
 
 .project-description {
 	font-size: 1.2rem;
+	line-height: 1.6rem;
 	font-weight: 300;
 }
 
 .project-link {
+	margin-top: 5px;
+	padding: 5px 10px;
 	display: inline-block;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 400;
 	background-color: #E75778;
-	color: #07161e;
+	color: #101010;
+	text-decoration: none;
+}
+
+.project-link:hover {
+	cursor: pointer;
+	color: #FFF;
 }
 
 .project-info {
@@ -509,11 +516,12 @@ Project
 .project-info-title {
 	display: inline-block;
 	margin-bottom: 10px;
-	padding-left: 20px;
+	padding: 0 20px;
 	font-size: 1.5rem;
 	font-weight: 600;
 	background-color: #E75778;
-	color: #07161e;
+	color: #101010;
+	font-family: "Pixelify Sans", sans-serif;
 }
 
 .project-image {
@@ -537,6 +545,37 @@ Project
 	}
 }
 
+.project-data {
+	padding: 100px 0;
+	background-image: url("../img/vhs.jpg");
+}
+
+.project-data-title {
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 0 20px 0 10px;
+	font-size: 2rem;
+	font-weight: 400;
+	background-color: #E75778;
+	color: #FFF;
+	font-family: "Pixelify Sans", sans-serif;
+}
+
+.project-block {
+	margin-bottom: 20px;
+}
+
+.project-data-subtitle {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 0 20px 0 10px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	background-color: #ffd900;
+	color: #101010;
+	font-family: "Pixelify Sans", sans-serif;
+}
+
 .project-goal-title {
 	display: inline-block;
 	margin-bottom: 10px;
@@ -544,7 +583,7 @@ Project
 	font-size: 1.5rem;
 	font-weight: 600;
 	background-color: #ffd900;
-	color: #07161e;
+	color: #101010;
 }
 
 .project-goal,
@@ -584,7 +623,7 @@ Project
 	font-size: 1.5rem;
 	font-weight: 600;
 	background-color: #ffd900;
-	color: #07161e;
+	color: #101010;
 }
 
 
@@ -597,7 +636,7 @@ Project
 /* Project one images */
 
 #projectOneCover {
-	background-image: url("../img/projects/projectone/vision_mockup.png");
+	background-image: url("../img/projects/projectone/design_systems.png");
 }
 
 #projectOneImage {
@@ -607,11 +646,15 @@ Project
 /* Project two images */
 
 #projectTwoCover {
-	background-image: url("../img/projects/projecttwo/platform_mockup.png");
+	background-image: url("../img/projects/projecttwo/ss_platforms.png");
 }
 
 #projectTwoImage {
 	background-image: url("../img/projects/projecttwo/platform_image.png");
+}
+
+#projectTwoImageBis {
+	background-image: url("../img/projects/projecttwo/airkit_platforms.png");
 }
 
 /* Project three images */
