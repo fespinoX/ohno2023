@@ -173,6 +173,51 @@ h4,
 	font-family: "Pixelify Sans", sans-serif;
 }
 
+/* Menu */
+
+.menu {
+	margin: 20px 0;
+}
+
+.menu-row .logo-container a {
+	max-width: 100%;
+	display: block;
+}
+
+.menu-items {
+	list-style: none;
+}
+
+.menu li {
+	display: inline-block;
+	margin: 0 10px;
+	padding: 5px 10px;
+	background-color: #E75778;
+}
+
+.menu li:hover {
+	cursor: pointer;
+	background-color: #FFD900;
+}
+
+.menu li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Pixelify Sans", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #101010;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.menu li {
+		display: block;
+	}
+}
 
 
 /* 
@@ -200,53 +245,16 @@ Landing page
 	background-position: center;
 }
 
-/* Menu */
-
-.menu {
-	margin: 20px 0;
-}
-
-.menu-row .logo-container a {
-	max-width: 100%;
-	display: block;
-}
-
-.menu-items {
-	list-style: none;
-}
-
-.menu li {
-	display: inline-block;
-	margin: 0 20px;
-	padding-bottom: 10px;
-}
-
-.menu li a {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-family: "Pixelify Sans", sans-serif;
-	font-size: 1.3rem;
-	font-weight: 500;
+#home .menu li {
+	background-color: transparent;
 	color: #FFF;
-	-webkit-transition: all 0.25s;
-	-o-transition: all 0.25s;
-	transition: all 0.25s;
 }
 
-
-@media only screen and (max-width: 767px) {
-	.menu li {
-		display: block;
-		margin-right: 0;
-	}
+#home .menu li a {
+	color: #FFF;
 }
 
-
-.menu li:hover {
-	cursor: pointer;
-}
-
-.menu li a:hover {
+#home .menu li:hover a {
 	color: #E75778;
 }
 
@@ -383,7 +391,7 @@ Landing page
 	transition: background 1s;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
 	.project-row {
 		-webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -480,7 +488,7 @@ Project
 	font-family: "Pixelify Sans", sans-serif;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
 	.project-name {
 		font-size: 1.4rem;
 	}
@@ -529,7 +537,7 @@ Project
 	background-position: left center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
 	.project-info {
 		padding: 50px 0;
 	}
@@ -660,25 +668,19 @@ Project
 /* Project three images */
 
 #projectThreeCover {
-	background-image: url("../img/projects/projectthree/trailblazer_mockup.png");
+	background-image: url("../img/projects/projectthree/AI_projects.png");
 }
 
 #projectThreeImage {
-	background-image: url("../img/projects/projectthree/trailblazer_image.png");
+	background-image: url("../img/projects/projecttwo/airkit_platforms.png");
 }
 
 /* Project four images */
 
 #projectFourCover {
-	background-image: url("../img/projects/projectfour/IDB_mockup.png");
+	background-image: url("../img/projects/projectfour/other_projects.png");
 }
 
 #projectFourImage {
-	background-image: url("../img/projects/projectfour/IDB_image.png");
-}
-
-/* Project five images */
-
-#projectFiveCover {
-	background-image: url("../img/projects/projectfive/other_mockup.png");
+	background-image: url("../img/projects/projectfour/other_mockup.png");
 }
