@@ -288,8 +288,7 @@ Landing page
 /* About me */
 
 #aboutme {
-	padding: 100px 0;
-	background-image: url("../img/vhs.jpg");
+	padding: 100px 0 0;
 }
 
 .fespi-picture {
@@ -448,8 +447,19 @@ Landing page
 /* Contact */
 
 #contact {
-	padding: 100px 0;
-	background-image: url("../img/vhs.jpg");
+	padding: 150px 0;
+	background-position: center center;
+	background-image: url("../img/backgrounds/vending.png");
+}
+
+#contact .ghost-text {
+	display: inline-block;
+	padding: 2px 5px;
+	font-size: 1.2rem;
+}
+
+#contact .ghost-text .text-highlight {
+	padding: 2px 5px;
 }
 
 
@@ -555,7 +565,6 @@ Project
 
 .project-data {
 	padding: 100px 0;
-	background-image: url("../img/vhs.jpg");
 }
 
 .project-data-title {
@@ -565,7 +574,7 @@ Project
 	font-size: 2rem;
 	font-weight: 400;
 	background-color: #E75778;
-	color: #FFF;
+	color: #101010;
 	font-family: "Pixelify Sans", sans-serif;
 }
 
