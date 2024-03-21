@@ -213,9 +213,10 @@ h4,
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 800px) {
 	.menu li {
 		display: block;
+		margin-bottom: 5px;
 	}
 }
 
@@ -258,6 +259,7 @@ Landing page
 	color: #E75778;
 }
 
+
 /* Presentation */
 
 .presentation-row {
@@ -282,6 +284,16 @@ Landing page
 	font-weight: 400;
 }
 
+
+@media only screen and (max-width: 1024px) {
+	.cover-name {
+		font-size: 5rem;
+	}
+
+	.name-highlight {
+		font-size: 1.2rem;
+	}
+}
 
 
 
@@ -348,6 +360,17 @@ Landing page
 	display: inline-block;
 	position: relative;
 	width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+
+	#projectOne,
+	#projectTwo,
+	#projectThree,
+	#projectFour {
+		height: 600px;
+	}
+
 }
 
 #projectOne:after,
@@ -499,6 +522,15 @@ Project
 }
 
 @media only screen and (max-width: 1024px) {
+
+	.project-cover {
+		height: 600px;
+	}
+
+	.project-cover .menu {
+		padding-top: 50px;
+	}
+	
 	.project-name {
 		font-size: 1.4rem;
 	}
