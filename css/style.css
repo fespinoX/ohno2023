@@ -725,3 +725,10 @@ Project
 #projectFourImage {
 	background-image: url("../img/projects/projectfour/other_mockup.png");
 }
+
+/* Utilities images */
+
+#utilitiesCover {
+	background-image: url("../img/projects/utilities/utilities.png");
+}
+

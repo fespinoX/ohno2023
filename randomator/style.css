@@ -1,0 +1,115 @@
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.randomator {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#options-list .list-group-item {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+#options-list .list-group-item input {
+    flex-grow: 1;
+    margin-right: 10px;
+    border-radius: 0;
+    color: #101010;
+    font-weight: 600;
+}
+
+#options-list .list-group-item input::placeholder {
+    color: #a2a2a2; /* Placeholder text color */
+    font-weight: 400;
+}
+
+#options-list .list-group-item button {
+    background: none;
+    border: none;
+    color: #E75778;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.action-btn {
+    width: 100%;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #FFD900;
+    color: #101010;
+}
+
+.btn-secondary:hover {
+    background-color: #FFD900;
+    border: 2px solid #FFD900;
+    color: #101010;
+}
+
+
+.btn-primary {
+    background-color: #FFD900;
+    border: 2px solid #FFD900;
+    color: #101010;
+}
+
+.btn-primary:hover {
+    background-color: #ffbb00;
+    border: 2px solid #ffbb00;
+    color: #FFF;
+}
+
+
+
+#options-list .list-group-item button:hover {
+    color: #b93f5b;
+}
+
+#options-list .empty-state {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #E75778;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#message {
+    text-align: center;
+    font-weight: bold;
+    color: #E75778;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    font-weight: 600;
+}
+
+#message.alert-success {
+    color: #101010;
+    border: none;
+}
