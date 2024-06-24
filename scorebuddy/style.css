@@ -1,0 +1,191 @@
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(img/score_bg.png);
+}
+
+.main-container {
+    padding: 50px;
+    background-color: #0E0726;
+}
+
+#playerList {
+    margin-top: 20px;
+}
+
+.nameinput {
+    display: inline-block;
+}
+
+.inputlabel {
+    color: #FFF;
+}
+
+.form-control,
+.form-control:focus {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.form-control:focus {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+
+.form-control::placeholder {
+    color: #cbc9c9;
+    font-weight: 500;
+    opacity: 1;
+}
+
+
+.btn {
+    font-weight: 600;
+    border: 2px solid;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border-color: #F13C76;
+    color: #FFF;
+}
+
+.btn-primary:hover,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #F13C76;
+    border-color: #F13C76;
+    color: #FFF;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #8223A0;
+    color: #FFF;
+}
+
+.btn-secondary:hover,
+.btn-secondary.focus,
+.btn-secondary:focus,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active {
+    background-color: #8223A0;
+    border-color: #8223A0;
+    color: #FFF;
+}
+
+.btn-info {
+    background-color: transparent;
+    border-color: #18F7F9;
+    color: #FFF;
+}
+
+.btn-info:hover,
+.btn-info.focus,
+.btn-info:focus,
+.btn-info:not(:disabled):not(.disabled).active,
+.btn-info:not(:disabled):not(.disabled):active {
+    background-color: #0dcccf;
+    border-color: #0dcccf;
+    color: black;
+}
+
+.btn-danger {
+    background-color: transparent;
+    border-color: #ff2828;
+    color: #FFF;
+}
+
+.btn-danger:hover,
+.btn-danger.focus,
+.btn-danger:focus,
+.btn-danger:not(:disabled):not(.disabled).active,
+.btn-danger:not(:disabled):not(.disabled):active {
+    background-color: #ff2828;
+    border-color: #ff2828;
+    color: black;
+}
+
+.btn-success {
+    background-color: transparent;
+    border-color: #4ede1a;
+    color: #FFF;
+}
+
+.btn-success:hover,
+.btn-success.focus,
+.btn-success:focus,
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active {
+    background-color: #4ede1a;
+    border-color: #4ede1a;
+    color: black;
+}
+
+.btn-warning {
+    background-color: transparent;
+    border-color: #FBE358;
+    color: #FFF;
+}
+
+.btn-warning:hover,
+.btn-warning.focus,
+.btn-warning:focus,
+.btn-warning:not(:disabled):not(.disabled).active,
+.btn-warning:not(:disabled):not(.disabled):active {
+    background-color: #FBE358;
+    border-color: #FBE358;
+    color: black;
+}
+
+.list-group-item {
+    color: #FFF;
+    background-color: #271356;
+}
+
+.modal-content {
+    color: #FFF;
+    background-color: #0E0726;
+}
+
+.modal-header,
+.modal-content,
+.modal-footer {
+    border: none;
+}
+
+.modal-title {
+    color: #FFF;
+}
+
+.modal-header .close,
+.btn-close {
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+}
+
+@media (max-width: 990px) {
+    .player-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    .player-buttons button {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
