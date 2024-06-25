@@ -74,8 +74,8 @@ function renderPlayers() {
         playerItem.className = 'list-group-item';
 
         const playerInfo = document.createElement('div');
-        playerInfo.className = 'd-flex justify-content-between align-items-center flex-wrap';
-        playerInfo.innerHTML = `<div><strong>${player.name}</strong> - Score: ${player.score}</div>`;
+        playerInfo.className = 'playerinfo d-flex justify-content-between align-items-center flex-wrap';
+        playerInfo.innerHTML = `<div class="playerleft"><strong>${player.name}</strong> - Score: ${player.score}</div>`;
 
         const buttonGroup = document.createElement('div');
         buttonGroup.className = 'mt-2 mt-md-0 player-buttons';

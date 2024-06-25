@@ -1,9 +1,6 @@
 body {
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
@@ -177,15 +174,19 @@ body {
 }
 
 @media (max-width: 990px) {
-    .player-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-top: 0.5rem;
+
+    .list-group-item {
+        margin-bottom: 12px;
     }
 
-    .player-buttons button {
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem;
+    .playerleft {
+        width: 100%;
+        margin-bottom: 8px;
     }
+
+    .bottom-btns .btn {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
 }
